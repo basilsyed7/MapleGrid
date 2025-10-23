@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0E14" />
+      <stop offset="50%" stop-color="#151226" />
+      <stop offset="100%" stop-color="#0B0E14" />
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="20%" r="60%">
+      <stop offset="0%" stop-color="rgba(167,139,250,0.9)" />
+      <stop offset="100%" stop-color="rgba(109,40,217,0)" />
+    </radialGradient>
+    <radialGradient id="glow2" cx="15%" cy="85%" r="65%">
+      <stop offset="0%" stop-color="rgba(34,211,238,0.8)" />
+      <stop offset="100%" stop-color="rgba(34,211,238,0)" />
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grad)" />
+  <rect width="1200" height="630" fill="url(#glow)" opacity="0.5" />
+  <rect width="1200" height="630" fill="url(#glow2)" opacity="0.35" />
+  <g transform="translate(180,160)" fill="#E5E7EB">
+    <text x="0" y="60" font-family="'Space Grotesk', sans-serif" font-size="60" fill="#A78BFA">MapleGrid Data</text>
+    <text x="0" y="130" font-family="'Space Grotesk', sans-serif" font-size="46" fill="#E5E7EB">Canadian sovereign compute for AI and fintech.</text>
+    <text x="0" y="210" font-family="'Inter', sans-serif" font-size="28" fill="rgba(229,231,235,0.75)">
+      Private racks, GPU-ready colocation, Tier-3 Toronto &amp; Montreal, low-latency fiber.
+    </text>
+  </g>
+  <g transform="translate(940,140) scale(1.2)">
+    <path d="M80 10l12 21 24 5-18 15 4 23-20-11-20 11 4-23-18-15 24-5z" fill="#A78BFA" opacity="0.75" />
+    <path d="M60 0l9 16 18 4-13 11 3 17-16-9-16 9 3-17-13-11 18-4z" fill="#22D3EE" opacity="0.6" />
+  </g>
+</svg>

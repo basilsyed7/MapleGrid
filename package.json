@@ -1,0 +1,29 @@
+{
+  "name": "maplegrid-data-landing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf css/styles.css js/main.js js/main.js.map",
+    "build": "npm run build:css && npm run build:ts",
+    "build:css": "tailwindcss -c tailwind.config.js -i ./src/styles.css -o ./css/styles.css --minify",
+    "build:ts": "esbuild src/ts/main.ts --bundle --format=esm --target=es2018 --outfile=js/main.js --minify",
+    "dev": "npm run build && concurrently \"npm run watch:css\" \"npm run watch:ts\" \"npm run serve\"",
+    "watch:css": "tailwindcss -c tailwind.config.js -i ./src/styles.css -o ./css/styles.css --watch",
+    "watch:ts": "esbuild src/ts/main.ts --bundle --format=esm --target=es2018 --outfile=js/main.js --sourcemap --watch",
+    "lint:ts": "tsc --noEmit",
+    "serve": "http-server . -c-1 -p 5173"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.20.2",
+    "http-server": "^14.1.1",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.4.9",
+    "typescript": "^5.3.3",
+    "wrangler": "^4.44.0"
+  }
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MapleGrid Data — Canadian Sovereign Compute</title>
+  <meta name="description" content="MapleGrid Data delivers Canadian sovereign compute and GPU-ready colocation from Tier-3 Toronto and Montreal facilities.">
+  <meta property="og:title" content="MapleGrid Data — Canadian Sovereign Compute">
+  <meta property="og:description" content="Canadian sovereign compute for AI and fintech. Private racks, GPU-ready colocation, Tier-3 Toronto &amp; Montreal.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://staging.maplegriddata.com/">
+  <meta property="og:image" content="https://staging.maplegriddata.com/assets/img/og-image.svg">
+  <meta name="theme-color" content="#0B0E14">
+  <link rel="icon" href="assets/logo/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="module" src="js/main.js" defer></script>
+</head>
+<body class="bg-space-black text-starlight antialiased">
+  <a class="sr-only focus:not-sr-only focus:ring-2 focus:ring-electric-violet focus:outline-none" href="#main-content">Skip to content</a>
+  <header class="fixed inset-x-0 top-0 z-40">
+    <div id="nav-bar" class="mx-auto max-w-content px-6 py-4 flex items-center justify-between rounded-b-lg bg-[rgba(12,14,20,0.85)] backdrop-blur-md transition-shadow">
+      <a href="#hero" class="flex items-center gap-4 text-starlight focus:outline-none focus-visible:ring-4 focus-visible:ring-electric-violet/45 rounded-md" aria-label="MapleGrid Data home">
+        <img src="assets/logo/nobg_logo.png" alt="MapleGrid Data logo" class="logo-mark" aria-hidden="true">
+        <span class="font-heading text-fs-24 tracking-tight">MapleGrid Data</span>
+      </a>
+      <nav aria-label="Main navigation" class="hidden lg:flex items-center gap-10 text-fs-16 relative">
+        <a href="#why" class="nav-link relative pb-1" data-nav-target="why">Why</a>
+        <a href="#solutions" class="nav-link relative pb-1" data-nav-target="solutions">Solutions</a>
+        <a href="#specs" class="nav-link relative pb-1" data-nav-target="specs">Specs</a>
+        <a href="#trust" class="nav-link relative pb-1" data-nav-target="trust">Trust</a>
+        <a href="#contact" class="nav-link relative pb-1" data-nav-target="contact">Contact</a>
+      </nav>
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="#contact" class="btn-secondary" data-nav-target="contact-cta">Request a call</a>
+      </div>
+      <button class="lg:hidden inline-flex items-center justify-center rounded-md bg-night-indigo/60 p-2 text-starlight focus-visible:ring-4 focus-visible:ring-electric-violet/45" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav" id="mobile-nav-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <svg class="h-6 w-6" viewBox="0 0 24 24" stroke="#E5E7EB" stroke-width="1.5" fill="none">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" />
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-nav" class="lg:hidden hidden" aria-label="Mobile navigation">
+      <div class="mx-4 mt-3 rounded-lg border border-white/5 bg-[rgba(17,20,31,0.92)] p-6 shadow-card">
+        <a href="#why" class="mobile-nav-link" data-nav-target="why">Why</a>
+        <a href="#solutions" class="mobile-nav-link" data-nav-target="solutions">Solutions</a>
+        <a href="#specs" class="mobile-nav-link" data-nav-target="specs">Specs</a>
+        <a href="#trust" class="mobile-nav-link" data-nav-target="trust">Trust</a>
+        <a href="#contact" class="mobile-nav-link" data-nav-target="contact">Contact</a>
+        <a href="#contact" class="mobile-nav-link font-medium text-electric-violet" data-nav-target="contact-cta">Request a call</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="relative pt-[120px]">
+    <section id="hero" class="relative overflow-hidden">
+      <canvas id="hero-canvas" class="absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
+      <div class="relative mx-auto max-w-content px-6 py-[160px]">
+        <div class="max-w-3xl space-y-8">
+          <p class="inline-flex items-center rounded-full border border-electric-violet/40 bg-night-indigo/50 px-5 py-2 text-fs-14 uppercase tracking-[0.2em] text-electric-violet">Sovereign Compute</p>
+          <h1 class="font-heading text-fs-64 leading-heading text-starlight">Canadian sovereign compute for AI and fintech.</h1>
+          <p class="text-fs-18 leading-body text-starlight/80">Private racks, GPU-ready colocation, Tier-3 Toronto &amp; Montreal, low-latency fiber, zero noisy-neighbors.</p>
+          <div class="flex items-center gap-6">
+            <a href="#contact" class="btn-primary" data-nav-target="contact-cta">Request a call</a>
+            <a href="#specs" class="btn-tertiary" data-nav-target="specs">View specs</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Why MapleGrid</h2>
+        <p class="section-subtitle">Built for workloads that demand sovereign control, predictable performance, and regulatory clarity.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <article class="value-card">
+          <h3>Data Residency in Canada</h3>
+          <p>Your workloads stay on Canadian soil.</p>
+        </article>
+        <article class="value-card">
+          <h3>Tier-3 Facilities</h3>
+          <p>Redundancy and uptime you can count on.</p>
+        </article>
+        <article class="value-card">
+          <h3>Private GPU Options</h3>
+          <p>Dedicated performance without hyperscaler noise.</p>
+        </article>
+        <article class="value-card">
+          <h3>Carrier-Grade Connectivity</h3>
+          <p>Low-latency routes and cross-connects.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="solutions" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Solutions</h2>
+        <p class="section-subtitle">Modular services designed for AI teams, fintech firms, and sovereign cloud operators.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-3">
+        <article class="solution-card">
+          <div class="icon-shell" aria-hidden="true">
+            <img src="assets/icons/placeholder.svg" alt="" class="h-8 w-8">
+          </div>
+          <h3>Private GPU Colocation</h3>
+          <p>Deploy GPU clusters in private cages with optimized power and cooling envelopes.</p>
+          <a href="#specs" class="learn-more" data-nav-target="specs">Learn more</a>
+        </article>
+        <article class="solution-card">
+          <div class="icon-shell" aria-hidden="true">
+            <img src="assets/icons/placeholder.svg" alt="" class="h-8 w-8">
+          </div>
+          <h3>Sovereign Private Cloud</h3>
+          <p>Build compliant private cloud fabrics with MapleGrid-managed networking and security.</p>
+          <a href="#specs" class="learn-more" data-nav-target="specs">Learn more</a>
+        </article>
+        <article class="solution-card">
+          <div class="icon-shell" aria-hidden="true">
+            <img src="assets/icons/placeholder.svg" alt="" class="h-8 w-8">
+          </div>
+          <h3>Low-Latency Connectivity</h3>
+          <p>Carrier-grade fiber and redundant cross-connects keep your services close to users.</p>
+          <a href="#specs" class="learn-more" data-nav-target="specs">Learn more</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="specs" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Specs</h2>
+        <p class="section-subtitle">Representative specs — final on request.</p>
+      </div>
+      <dl class="spec-grid">
+        <div>
+          <dt>Power Density</dt>
+          <dd>Up to 15–30 kW/rack</dd>
+        </div>
+        <div>
+          <dt>Redundancy</dt>
+          <dd>N / N+1</dd>
+        </div>
+        <div>
+          <dt>Cooling</dt>
+          <dd>Hot aisle containment</dd>
+        </div>
+        <div>
+          <dt>Rack Options</dt>
+          <dd>42U / 48U</dd>
+        </div>
+        <div>
+          <dt>Connectivity</dt>
+          <dd>Cross-connects, multiple carriers</dd>
+        </div>
+        <div>
+          <dt>Locations</dt>
+          <dd>Toronto, Montreal</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section id="trust" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Trust &amp; Compliance</h2>
+        <p class="section-subtitle">Transparent safeguards to keep critical workloads protected at every layer.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <article class="trust-card">
+          <h3>Uptime SLO</h3>
+          <p>Tier-3 architecture engineered for continuous availability.</p>
+        </article>
+        <article class="trust-card">
+          <h3>Physical Security</h3>
+          <p>Multi-layer access controls, biometric check-in, 24/7 manned security.</p>
+        </article>
+        <article class="trust-card">
+          <h3>Monitoring &amp; Surveillance</h3>
+          <p>Continuous CCTV with secure retention and authorized-only review policies.</p>
+        </article>
+        <article class="trust-card">
+          <h3>Compliance Roadmap</h3>
+          <p>Formal certifications pending for staging — final package available on request.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-subtitle">Tell us about your workloads. We’ll align the right racks, power, and connectivity.</p>
+      </div>
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1fr]">
+        <div class="rounded-2xl border border-white/5 bg-night-indigo/40 p-12 shadow-card">
+          <form id="contact-form" class="space-y-6" novalidate>
+            <div>
+              <label for="contact-name" class="form-label">Name</label>
+              <input id="contact-name" name="name" type="text" autocomplete="name" required class="form-input" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="contact-company" class="form-label">Company</label>
+              <input id="contact-company" name="company" type="text" autocomplete="organization" class="form-input" placeholder="Company or team" />
+            </div>
+            <div>
+              <label for="contact-email" class="form-label">Email</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" required class="form-input" placeholder="you@example.com" />
+            </div>
+            <div>
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea id="contact-message" name="message" rows="4" class="form-textarea" placeholder="Workload requirements, timelines, or questions"></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full">Request a call</button>
+            <p class="text-sm text-starlight/70">Prefer email? <a href="mailto:info@maplegrid.net" class="text-electric-violet underline decoration-electric-violet/60 decoration-2 underline-offset-2">info@maplegrid.net</a></p>
+          </form>
+        </div>
+        <div class="space-y-8">
+          <div class="rounded-2xl border border-white/5 bg-night-indigo/20 p-10 shadow-inner">
+            <h3 class="font-heading text-fs-32">Sovereign-ready racks</h3>
+            <p class="mt-4 text-starlight/80">Dedicated cages, dual-powered cabinets, and GPU-optimized cooling ready for AI scaling.</p>
+          </div>
+          <div class="rounded-2xl border border-white/5 bg-night-indigo/20 p-10 shadow-inner">
+            <h3 class="font-heading text-fs-32">Trusted operations</h3>
+            <p class="mt-4 text-starlight/80">24/7 on-site technicians, hands-and-eyes support, and secure customer suites.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite" class="toast hidden" aria-hidden="true">
+    <p>Thanks — we’ll get back to you within one business day.</p>
+    <button type="button" class="toast-close" aria-label="Dismiss notification">&times;</button>
+  </div>
+
+  <footer class="border-t border-white/5 bg-night-indigo/60">
+    <div class="mx-auto flex max-w-content flex-col gap-6 px-6 py-10 lg:flex-row lg:items-center lg:justify-between">
+      <div>
+        <span class="font-heading text-fs-24 text-starlight">MapleGrid Data</span>
+        <p class="text-sm text-starlight/60">© <span data-year></span> MapleGrid Data. All rights reserved.</p>
+      </div>
+      <div class="text-sm text-starlight/60">
+        <p>Cloud-native colocation for regulated industries.</p>
+        <p class="mt-1">Future footer links will be added here.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.maplegridAnalytics = function () {
+      window.dataLayer.push(arguments);
+    };
+  </script>
+</body>
+</html>
