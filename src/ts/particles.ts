@@ -91,6 +91,8 @@ export const initParticles = (options: ParticleOptions): ParticleHandle => {
   let height = canvas.clientHeight;
 
   const cleanupFns: Array<() => void> = [];
+  let lastFrameTime = 0;
+  const frameInterval = 1000 / 30;
 
   const isInExclusionZone = (x: number, y: number) =>
     exclusionZones.some(
@@ -182,9 +184,15 @@ export const initParticles = (options: ParticleOptions): ParticleHandle => {
       return;
     }
 
+    const now = performance.now();
+    if (now - lastFrameTime < frameInterval) {
+      animationFrame = window.requestAnimationFrame(renderFrame);
+      return;
+    }
+    lastFrameTime = now;
+
     context.clearRect(0, 0, width, height);
     const pointerRadius = Math.min(width, height) * 0.65;
-    const now = performance.now();
 
     particles.forEach((particle) => {
       applyPointerForce(particle, pointerRadius);
@@ -244,6 +252,7 @@ export const initParticles = (options: ParticleOptions): ParticleHandle => {
       return;
     }
     running = true;
+    lastFrameTime = 0;
     animationFrame = window.requestAnimationFrame(renderFrame);
   };
 

@@ -219,6 +219,8 @@
     padding: var(--sp-96) 1.5rem;
     position: relative;
     isolation: isolate;
+    content-visibility: auto;
+    contain-intrinsic-size: 600px;
   }
 
   .section::before {
@@ -267,6 +269,7 @@
     border: 1px solid rgba(167, 139, 250, 0.1);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
     transition: transform 250ms ease, box-shadow 250ms ease, border 250ms ease, background 250ms ease;
+    will-change: transform, box-shadow;
   }
 
   .value-card:hover,
@@ -414,10 +417,14 @@
     backdrop-filter: blur(18px);
   }
 
-  .bg-grid-overlay {
-    background-image: linear-gradient(rgba(229, 231, 235, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(229, 231, 235, 0.02) 1px, transparent 1px);
-    background-size: 80px 80px;
-  }
+.bg-grid-overlay {
+  background-image: linear-gradient(rgba(229, 231, 235, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(229, 231, 235, 0.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+#hero .space-y-8 > * {
+  will-change: opacity, transform;
+}
 }
 
 @media (prefers-reduced-motion: reduce) {

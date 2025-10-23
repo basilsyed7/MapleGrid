@@ -324,14 +324,22 @@ const initParticlesModule = () => {
   });
   controller.init();
 
+  let heroInView = true;
+  let scrollTimeout: number | null = null;
+  let isScrolling = false;
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.target !== heroSection) {
         return;
       }
       if (entry.isIntersecting) {
-        controller.resume();
+        heroInView = true;
+        if (!reduceMotionQuery.matches && !isScrolling) {
+          controller.resume();
+        }
       } else {
+        heroInView = false;
         controller.pause();
       }
     });
@@ -341,14 +349,38 @@ const initParticlesModule = () => {
   const handleVisibility = () => {
     if (document.hidden) {
       controller.pause();
-    } else if (!reduceMotionQuery.matches) {
+    } else if (!reduceMotionQuery.matches && heroInView && !isScrolling) {
       controller.resume();
     }
   };
   document.addEventListener('visibilitychange', handleVisibility);
 
+  const handleScroll = () => {
+    if (!heroInView || reduceMotionQuery.matches) {
+      return;
+    }
+    if (!isScrolling) {
+      isScrolling = true;
+      controller.pause();
+    }
+    if (scrollTimeout) {
+      window.clearTimeout(scrollTimeout);
+    }
+    scrollTimeout = window.setTimeout(() => {
+      isScrolling = false;
+      if (heroInView && !reduceMotionQuery.matches) {
+        controller.resume();
+      }
+    }, 200);
+  };
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
   return () => {
     observer.disconnect();
+    if (scrollTimeout) {
+      window.clearTimeout(scrollTimeout);
+    }
+    window.removeEventListener('scroll', handleScroll);
     document.removeEventListener('visibilitychange', handleVisibility);
     destroyParticles(controller);
   };
